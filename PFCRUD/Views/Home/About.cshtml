@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+@model List<PFCRUD.pcrud.Clx>
+
+
+
+\
+<table class="table table-striped table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Std_id</th>
+            <th scope="col">Std_name</th>
+            <th scope="col">Age</th>
+            <th scope="col">City</th>
+            <th scope="col">Fee</th>
+            <th scope="col">Percentage</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+
+
+
+            @foreach (var item in Model)
+            {
+        <tr>
+                <th>@item.Std_id</th>
+            <td>@item.Std_name</td>
+            <td>@item.Age</td>
+            <td>@item.City</td>
+            <td>@item.Fee</td>
+            <td>@item.Percentage</td>
+            <td>
+                <a href="@Url.Action("Edit", "Home",new {id=item.Std_id })" class="btn btn-info">Edit</a>
+            </td> 
+            <td>
+                <a href="@Url.Action("Delete", "Home",new {id=item.Std_id })" class="btn btn-danger">Delete</a>
+            </td>
+
+        </tr>
+            }
+        </tbody>
+</table>

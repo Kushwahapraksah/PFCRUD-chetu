@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@model PFCRUD.Models.Modcls
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    @Html.HiddenFor(s => s.Std_id);
+    <div class="form-group">
+        <label> Student_name</label>
+        @Html.TextAreaFor(m => m.Std_name, new { @class = "form-control", @required = "required", @placeholder = "Enter your name " });
+        @*<label> Student_name</label>
+            @Html.TextAreaFor(m => m.Std_name)*@
+
+    </div>
+    <div class="form-group">
+        <label> Age</label>
+        @Html.TextAreaFor(m => m.Age, new { @class = "form-control", @required = "required", @placeholder = "Enter your Age " });
+        @*<label> Student_name</label>
+            @Html.TextAreaFor(m => m.Std_name)*@
+
+    </div>
+
+    <div class="form-group">
+        <label> Fee</label>
+        @Html.TextAreaFor(m => m.Fee, new { @class = "form-control", @required = "required", @placeholder = "Enter your Fee " });
+        @*<label> Student_name</label>
+            @Html.TextAreaFor(m => m.Std_name)*@
+
+    </div>
+
+    <div class="form-group">
+        <label> City</label>
+        @Html.TextAreaFor(m => m.City, new { @class = "form-control", @required = "required", @placeholder = "Enter your City " });
+        @*<label> Student_name</label>
+            @Html.TextAreaFor(m => m.Std_name)*@
+
+    </div>
+
+    <div class="form-group">
+        <label> Precentage</label>
+        @Html.TextAreaFor(m => m.Percentage, new { @class = "form-control", @required = "required", @placeholder = "Enter your Percentage " });
+        @*<label> Student_name</label>
+            @Html.TextAreaFor(m => m.Std_name)*@
+
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+}
